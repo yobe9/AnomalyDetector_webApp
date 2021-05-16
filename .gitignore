@@ -1,0 +1,3 @@
+# Project exclude paths
+/controller/node_modules/
+/model/node_modules/

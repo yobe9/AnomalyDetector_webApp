@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anomaly Detector Server</title>
+    <style>
+        .frame {
+            margin-left: 100px;
+        }
+
+        .labelAlgo {
+            margin-top: 60px;
+            margin-bottom: 40px;
+            margin-left: 140px;
+            background: none !important;
+            border: none;
+            padding: 0 !important;
+            font-family: arial, sans-serif;
+            color: black;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        .selsectAlgo {
+            width: 100%;
+            min-width: 15ch;
+            max-width: 25ch;
+            border: 1px solid var(--select-border);
+            border-radius: 0.25em;
+            padding: 0.25em 0.5em;
+            font-size: 1rem;
+            color: black;
+            cursor: pointer;
+            line-height: 1.1;
+            background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+            background-color: #fff;
+            box-shadow: 0 2px 6px 1px #e1e5e8;
+            margin-left: 5px;
+            margin-bottom: 20px;
+        }
+
+
+        .labelinput1{
+            margin-top: 50px;
+            margin-bottom: 40px;
+            margin-left: 140px;
+            background: none !important;
+            border: none;
+            padding: 0 !important;
+            font-family: arial, sans-serif;
+            color: black;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .labelinput2{
+            margin-top: 40px;
+            margin-bottom: 10px;
+            margin-left: 140px;
+            background: none !important;
+            border: none;
+            padding: 0 !important;
+            font-family: arial, sans-serif;
+            color: black;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .input {
+            margin-left: 140px;
+            margin-bottom: 20px;
+        }
+
+        input[type=submit] {
+            background-color: white;
+            color: black;
+            border: 2px solid dimgray;
+            padding: 10px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 0.25em;
+        }
+
+        input[type=submit]:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .upload {
+            margin-left: 520px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        input[type=file] {
+            background-color: lightgray;
+            border: black;
+            color: black;
+            border-radius: 0.25em;
+            font-size: 1rem;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<form action="/detect" method="post" enctype="multipart/form-data" name="searchForm" target="result">
+<img src="https://github.com/YaelAvioz/webapp/blob/main/logo3.png?raw=true" width="100%" height="15%">
+
+<label class="labelAlgo">Choose an Algorithem:</label>
+
+<select class="selsectAlgo" id="algorithem" name="algoChoice">
+    <option value="line">line</option>
+    <option value="circle">circle</option>
+</select>
+
+<div>
+    <div><label class="labelinput1">Upload Train File</label></div>
+    <input class="input" type="file" name="train_file">
+</div>
+<div>
+    <div><label class="labelinput2">Upload Test File</label></div>
+    <input class="input" type="file" name="test_file">
+</div>
+
+<div class="upload">
+    <input type="submit" value="Upload">
+</div>
+</form>
+<iframe class="frame" name="result" width="80%" height="500"></iframe>
+</body>
+</html>
