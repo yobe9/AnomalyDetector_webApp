@@ -14,11 +14,11 @@ const lineAnom = new ffi.Library('../controller/linealgodll.dll', {
     ]
 });
 
-function circleWrap() {
+async function circleWrap() {
     circleAnom.findAnomalies();
 }
 
-function lineWrap(){
+async function lineWrap(){
     lineAnom.findAnomalies();
 }
 
