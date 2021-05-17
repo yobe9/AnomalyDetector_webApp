@@ -42,7 +42,7 @@ The GUI offers the following options:
 
 
 ### Links
-- ReadMe of the Main classes - [MainClassesReadme](combination1/MainClassesReadme.md)
+- ReadMe of the Main classes - [MainClassesReadme](MainClassesReadme.md)
 ### Video
 [The video with sound](Media/FG_Video.mp4) - need to download before watching.
 ![](Media/FG_gif.gif)
