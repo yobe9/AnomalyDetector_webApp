@@ -1,9 +1,10 @@
-# Anomalies Detection Web App
+# Anomalies Detectector Web App
 ### General
 In this project, we built a web application , which allows us inspect  flight-related data and showing the flight's anomalies.
 The project includes MVC  architecture,Client-Server architecture, and unsynchronized programming.
 
 ### Emphasis for examiner
+- ##### We completed the project according to the second version of the exercise.
 - #### dll asumptions
   - We assumed the app is runnning on 64-bit system, we also included a x86 win32 versions of the dlls in the controller so you can change the name of the loaded dll in the server file accroding to your system.
   - We changed the threshold value in the mincircle algorithm, to detect more anomalies.  
