@@ -1,6 +1,7 @@
 const express = require('express')
 const fileUpload = require('express-fileupload')
 const model = require('../model/anomaliesModel')
+const fs = require('fs')
 
 
 const app = express()
@@ -22,6 +23,11 @@ app.post('/detect', (request,response) => {
         let choice = request.body.algoChoice
 
         let str = model.findAnomalies(trainCSV, testCSV, choice)
+
+        fs.writeFile('../view/result.json', str, (err) => {
+            if (err) throw err;
+        });
+
         response.write(str)
 
     }

@@ -5,19 +5,44 @@
   <title>Title</title>
 </head>
 <body>
-<form action="/search" method="post" enctype="multipart/form-data" name="searchForm" target="result">
-  <table>
-    <tr>
-      <td><input type="file" name="text_file"></td>
-    </tr>
-    <tr>
-      <td><input type="file" name="text_file2"></td>
-    </tr>
-  </table>
-  <br>
-  <input type="submit">
-</form>
-<br>
-<iframe name="result" width="50%" height="50%"></iframe>
+<div id="omri"></div>
+<table id="yael">
+<!--  <tr>-->
+<!--    <th>Line</th>-->
+<!--    <th>First Attribute</th>-->
+<!--    <th>Second Attribute</th>-->
+<!--  </tr>-->
+</table>
+<script>
+  var line = []
+  var first_attribute = []
+  var second_attribute = []
+  fetch("result.json")
+  .then(response => response.json())
+  .then(data => {
+    data.key.forEach(element => line.push(element.line))
+    data.key.forEach(element => first_attribute.push(element.field1))
+    data.key.forEach(element => second_attribute.push(element.field2))
+
+    var table = document.getElementById("yael");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2)
+    cell1.innerHTML = "Line";
+    cell2.innerHTML = "First Attribute";
+    cell3.innerHTML = "Second Attribute";
+
+    for (var i = 1; i < line.length; i++){
+      var row = table.insertRow(i);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2)
+      cell1.innerHTML = line[i];
+      cell2.innerHTML = first_attribute[i];
+      cell3.innerHTML = second_attribute[i];
+    }
+  })
+</script>
 </body>
 </html>

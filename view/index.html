@@ -129,7 +129,20 @@
     <input type="submit" value="Upload">
 </div>
 </form>
-<iframe class="frame" name="result" width="80%" height="500" title="Anomalies Results" style="border:none;"></iframe>
+<iframe class="frame" name="result" width="10%" height="10" title="Anomalies Results" style="display: none;"></iframe>
+<br>
+<button onclick="var ifr=document.getElementsByName('Right')[0]; ifr.src=ifr.src;">Show Results</button>
+<br>
+<iframe id="iframe" name="Right" class="frame" src="index2.html" width="80%" height="500" title="Anomalies Results" frameBorder="0"></iframe>
+<!--<script>-->
+<!--    window.setInterval(function() {-->
+<!--        reloadIFrame()-->
+<!--    }, 3000);-->
+
+<!--    function reloadIFrame() {-->
+<!--        console.log('reloading..');-->
+<!--        document.getElementById('iframe').contentWindow.location.reload();-->
+<!--    }-->
 
 </body>
 </html>

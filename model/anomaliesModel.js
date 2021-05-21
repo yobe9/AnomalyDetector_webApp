@@ -41,7 +41,7 @@ function findAnomalies(trainCSV, testCSV, algoChoice) {
 
 
 
-    let retValue = ""
+    let retValue = "{\"key\": ["
     let words = []
     let fields = []
     let withoutTab = []
@@ -56,9 +56,11 @@ function findAnomalies(trainCSV, testCSV, algoChoice) {
         if (words.length > 1) {
             fields = words[1].split('$')
 
-            retValue = retValue + JSON.stringify({line: withoutTab[0], field1: fields[0], field2: fields[1]}) + "\n"
+            retValue = retValue + JSON.stringify({line: withoutTab[0], field1: fields[0], field2: fields[1]}) + ",\n"
         }
     }
+    retValue = retValue.substring(0, retValue.length - 2)
+    retValue = retValue + "]}"
     return retValue
 }
 
