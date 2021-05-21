@@ -25,6 +25,11 @@ The GUI offers the following options:
   - We wrapped our dll function in a async function.
   - We called  the method which used the flight data stored in the input.txt to be loaded, processed, detect anomalies and write them into the output.txt file.
 
+- ### Client
+ For user story 2 - we created a python client that sends a http POST request to our server using the library "requests" that is supported in Python 3.7.1.
+ before running the client make sure that "requests" library exists on the current python and of course run the server before running the client.
+ If the "requests" library doesn't exist(isn't supported on every python version) run in the cmd: py -m pip install requests or/and py -verNum -m pip install requests(that verNum is the current version number of python. for example for python 3.9: py -3.9 -m pip install requests).
+
 
 ### Packages requirements
 - In order to continue developing the project, the following packages must be installed :
