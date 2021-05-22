@@ -53,5 +53,5 @@ The GUI offers the following options:
 - ReadMe of the Main classes - [MainClassesReadme](MainClassesReadme.md)
 ### Video
 [The video with sound](Media/FG_Video.mp4) - need to download before watching.
-![](Media/FG_gif.gif)
+![](Anomalies_Detectector_Web_App.gif)
 
