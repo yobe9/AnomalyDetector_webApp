@@ -1,6 +1,7 @@
 const fs = require('fs')
 const ffi = require('ffi-napi')
 
+//setting the functions call of the dll files
 const circleAnom = new ffi.Library('../controller/circlealgodll.dll', {
     "findAnomalies": [
         "void", []
@@ -22,7 +23,7 @@ async function lineWrap(){
     lineAnom.findAnomalies();
 }
 
-
+//writing the csv files to txt format and activating the dll's function according to the algorithm choice
 function findAnomalies(trainCSV, testCSV, algoChoice) {
     var result = trainCSV.data.toString()
     var result2 = testCSV.data.toString()
@@ -40,7 +41,7 @@ function findAnomalies(trainCSV, testCSV, algoChoice) {
     }
 
 
-
+    //creating json file from the txt result of the anomalies detector
     let retValue = "{\"key\": ["
     let words = []
     let fields = []
