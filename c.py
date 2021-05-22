@@ -8,4 +8,4 @@ payload ={'algoChoice':c}
 
 res = session.post("http://localhost:8080/detect", data=payload, files=files)
 print(res.text) #prints the returned data
-print(res.url) #prints the url of the response
+#print(res.url) #prints the url of the response

@@ -101,6 +101,24 @@
             font-size: 1rem;
         }
 
+        button {
+            margin-left: 500px;
+            margin-bottom: 20px;
+            background-color: white;
+            color: black;
+            border: 2px solid dimgray;
+            padding: 10px 32px;
+            text-decoration: none;
+            /*margin: 4px 2px;*/
+            cursor: pointer;
+            border-radius: 0.25em;
+        }
+
+        button:hover{
+            background-color: #4CAF50;
+            color: white;
+        }
+
 
     </style>
 
@@ -131,7 +149,7 @@
 </form>
 <iframe class="frame" name="result" width="10%" height="10" title="Anomalies Results" style="display: none;"></iframe>
 <br>
-<button onclick="var ifr=document.getElementsByName('Right')[0]; ifr.src=ifr.src;">Show Results</button>
+<button onclick="var ifr=document.getElementsByName('Right')[0]; ifr.src=ifr.src;">Show\ Refresh Results</button>
 <br>
 <iframe id="iframe" name="Right" class="frame" src="index2.html" width="80%" height="500" title="Anomalies Results" frameBorder="0"></iframe>
 <!--<script>-->
