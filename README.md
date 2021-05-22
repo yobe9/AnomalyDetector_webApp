@@ -8,6 +8,7 @@ The project includes MVC  architecture,Client-Server architecture, and unsynchro
 - #### dll asumptions
   - We assumed the app is runnning on 64-bit system, we also included a x86 win32 versions of the dlls in the controller so you can change the name of the loaded dll in the server file accroding to your system.
   - We changed the threshold value in the mincircle algorithm, to detect more anomalies.  
+- To watch the results of the anomalies, you need to press the Upload, and after the calculation is done, press the Show\ Refresh Results button.
 
 ### Repositories structure
 - Controller folder - contains the server and  the dll files of the minimal circle and the regression line algorithms.
